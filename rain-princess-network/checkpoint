@@ -1,0 +1,2 @@
+model_checkpoint_path: "rain_princess.ckpt"
+all_model_checkpoint_paths: "rain_princess.ckpt"
