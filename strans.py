@@ -34,7 +34,9 @@ def strans(in_img, mynetwork):
 
 
 def ffwd(content, network_path):
-    with tf.Graph().as_default(), tf.Session() as sess:
+    config = tf.ConfigProto(log_device_placement=True, allow_soft_placement=True)
+    config.gpu_options.allow_growth = True
+    with tf.Graph().as_default(), tf.Session(config=config) as sess, tf.device('cpu:0'):
         img_placeholder = tf.placeholder(tf.float32, shape=content.shape,
                                          name='img_placeholder')
 

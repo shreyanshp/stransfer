@@ -1,5 +1,3 @@
-# Copyright (c) 2016-2017 Shafeen Tejani. Released under GPLv3.
-
 import tensorflow as tf
 
 WEIGHTS_INIT_STDEV = .1
