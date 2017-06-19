@@ -1,1 +1,1 @@
-web: gunicorn -w 1 -b 0.0.0.0:$PORT --timeout 90 -k gevent app:app
+web: python app.py
